@@ -26,13 +26,13 @@ from cloudshell.networking.alcatel.snmp.alcatel_snmp_handler import AlcatelSnmpH
     SnmpHandler
 
 
-class AlcatelTimetraSwitchShell2GDriver(ResourceDriverInterface, NetworkingResourceDriverInterface,
+class AlcatelTimetraRouterShell2GDriver(ResourceDriverInterface, NetworkingResourceDriverInterface,
                                         GlobalLock):
     SUPPORTED_OS = [r"TiMOS"]
-    SHELL_NAME = "AlcatelTimetraSwitchShell2G"
+    SHELL_NAME = "AlcatelTimetraRouterShell2G"
 
     def __init__(self):
-        super(AlcatelTimetraSwitchShell2GDriver, self).__init__()
+        super(AlcatelTimetraRouterShell2GDriver, self).__init__()
         self._cli = None
 
     def initialize(self, context):

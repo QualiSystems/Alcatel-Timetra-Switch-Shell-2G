@@ -1,21 +1,21 @@
 tosca_definitions_version: tosca_simple_yaml_1_0
 
 metadata:
-  template_name: AlcatelTimetraSwitchShell2G
+  template_name: AlcatelTimetraRouterShell2G
   template_author: Quali
   template_version: 1.0.0
   template_icon: shell-icon.png
 
 description: >
- This Shell supports Alcatel Switch devices that run TiMetra operating system
+ This Shell supports Alcatel Router devices that run TiMetra operating system
 
 imports:
   - cloudshell_standard: cloudshell_networking_standard_5_0_2.yaml
 
 node_types:
 
-  vendor.AlcatelTimetraSwitchShell2G:
-    derived_from: cloudshell.nodes.Switch
+  vendor.AlcatelTimetraRouterShell2G:
+    derived_from: cloudshell.nodes.Router
     #properties:
     #  property_name:
     #    type: string          # optional values: string, integer, float, boolean, cloudshell.datatypes.Password
@@ -136,5 +136,5 @@ node_types:
         file: shell-icon.png
         type: tosca.artifacts.File
       driver:
-        file: AlcatelTimetraSwitchShell2GDriver.zip
+        file: AlcatelTimetraRouterShell2GDriver.zip
         type: tosca.artifacts.File
