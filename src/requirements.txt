@@ -1,1 +1,1 @@
-cloudshell-networking-alcatel>=1.1,<1.2
+cloudshell-networking-alcatel>=1.2,<1.3
