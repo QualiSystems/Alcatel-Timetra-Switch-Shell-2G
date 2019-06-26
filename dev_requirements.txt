@@ -1,0 +1,4 @@
+pip-tools
+pre-commit
+tox
+--extra-index-url https://test.pypi.org/simple -r src/requirements.in

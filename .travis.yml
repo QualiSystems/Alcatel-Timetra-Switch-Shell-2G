@@ -1,0 +1,21 @@
+language: python
+
+jobs:
+  include:
+    - if: branch = master
+      env: TOXENV=master
+      python: 2.7
+      after_success: codecov
+    - if: branch != master
+      env: TOXENV=dev
+      python: 2.7
+      after_success: codecov
+    - env: TOXENV=pre-commit
+      python: 3.7
+      dist: xenial
+
+install:
+  - pip install tox-travis
+  - pip install codecov
+
+script: tox
